@@ -5,6 +5,28 @@
 
         </div>
     </div>
+    <div class="card">
+        <div class="row">
+            <div class="col-lg-1">
+                <p>Filter By</p>
+            </div>
+
+            <div class="col-lg-3">
+                <select class="form-control">
+                    <option>Select Country</option>
+                    <option>South Africa</option>
+                    <option>Singapore</option>
+                </select>
+            </div>
+            <div class="col-lg-3">
+                <select class="form-control">
+                    <option>Select Province</option>
+                    <option>Western Cape</option>
+                    <option>Northern Cape</option>
+                </select>
+            </div>
+        </div> 
+    </div><br>
     <div class="row">
         <div class="col-lg-8 View">
 
@@ -53,8 +75,10 @@
                         <td><img src="../../assets/Images/smartcard.jpg" width="70%" height="auto"></td>
                         <td><img src="../../assets/Images/tv.jpg" width="70%" height="50%"></td>
                         <td>2022-04-01</td> -->
-                        <td> <button class="DeleteBTN" data-toggle="modal" data-target="#exampleModal">Complete</button><br><br>
-                            <button class="DeleteBTN" data-toggle="modal" data-target="#exampleModal1">OTP</button><br><br>
+                        <td> <button class="DeleteBTN" data-toggle="modal"
+                                data-target="#exampleModal">Complete</button><br><br>
+                            <button class="DeleteBTN" data-toggle="modal"
+                                data-target="#exampleModal1">OTP</button><br><br>
                             <button class="DeleteBTN" data-toggle="modal" data-target="#exampleModal2">Issue</button>
                         </td>
                     </tr>
@@ -71,7 +95,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Complete Issue</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -158,7 +182,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">OTP Validation</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -169,16 +193,57 @@
                         <p>Enter OTP</p>
                     </div>
                     <div class="col-lg-4">
-                        <input class="form-controll">
+                        <input class="form-control">
                     </div>
                 </div><br>
-               
+
 
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" (click)="complete()">Validate</button>
+                <button type="button" class="btn btn-primary" (click)="validate()">Validate</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Raise Issue</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <p>Details :</p>
+                    </div>
+                    <div class="col-lg-8">
+                        <textarea class="form-control" rows="4"></textarea>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <p>Attachment :</p>
+                    </div>
+                    <div class="col-lg-8">
+                        <ngx-dropzone (change)="onSelect($event)" style="width:100% ;height: auto;">
+                            <ngx-dropzone-label>Please Attach Photo!</ngx-dropzone-label>
+                            <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+                                <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                            </ngx-dropzone-preview>
+                        </ngx-dropzone>
+                    </div>
+                </div><br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" (click)="issue()">Raise Issue</button>
             </div>
         </div>
     </div>
