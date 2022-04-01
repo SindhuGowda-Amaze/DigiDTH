@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { StaffSetupComponent } from './staff-setup/staff-setup.component';
 import { NewInstallationComponent } from './new-installation/new-installation.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path:'StaffSetup',component:StaffSetupComponent},
   {path:'CustomerReport',component:CustomerReportComponent},
   {path:'NewInstallation',component:NewInstallationComponent},
-  {path:'CustomerIssues',component:CustomerIssuesComponent}
+  {path:'CustomerIssues',component:CustomerIssuesComponent},
+  {path:'Footer',component:FooterComponent}
 ];
 
 @NgModule({

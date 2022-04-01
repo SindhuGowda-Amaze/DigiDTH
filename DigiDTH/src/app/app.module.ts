@@ -12,6 +12,8 @@ import { StaffSetupComponent } from './staff-setup/staff-setup.component';
 import { CustomerReportComponent } from './customer-report/customer-report.component';
 import { NewInstallationComponent } from './new-installation/new-installation.component';
 import { CustomerIssuesComponent } from './customer-issues/customer-issues.component';
+import { FooterComponent } from './footer/footer.component';
+import { AddStaffComponent } from './add-staff/add-staff.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { CustomerIssuesComponent } from './customer-issues/customer-issues.compo
     StaffSetupComponent,
     CustomerReportComponent,
     NewInstallationComponent,
-    CustomerIssuesComponent
+    CustomerIssuesComponent,
+    FooterComponent,
+    AddStaffComponent
   ],
   imports: [
     BrowserModule,
