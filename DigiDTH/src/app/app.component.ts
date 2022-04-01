@@ -40,7 +40,7 @@ export class AppComponent {
   public logout() {
     debugger
     this.loader = true;
-    localStorage.setItem('roledid', "0");
+    localStorage.setItem('roleid', "0");
     this.router.navigate(['/Login']).then(() => {
 
       location.reload();

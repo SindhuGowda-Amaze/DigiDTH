@@ -14,7 +14,7 @@ export class CustomerReportComponent implements OnInit {
   }
 
 
-  fileName = 'Report.xlsx';
+  fileName = 'Customer Report.xlsx';
   exportexcel(): void {
     /* table id is passed over here */
     let element = document.getElementById('download');

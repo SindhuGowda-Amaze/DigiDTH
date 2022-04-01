@@ -101,7 +101,7 @@ export class NewInstallationComponent implements OnInit {
   }
 
 
-  fileName = 'Report.xlsx';
+  fileName = 'New Issues.xlsx';
   exportexcel(): void {
     /* table id is passed over here */
     let element = document.getElementById('download');

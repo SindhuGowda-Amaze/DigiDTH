@@ -14,7 +14,7 @@ export class CustomerIssuesComponent implements OnInit {
   }
 
   
-  fileName = 'Report.xlsx';
+  fileName = 'Pending Issues.xlsx';
     exportexcel(): void {
       /* table id is passed over here */
       let element = document.getElementById('download');

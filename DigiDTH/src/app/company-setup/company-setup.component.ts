@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 import * as XLSX from 'xlsx';
 
 @Component({
@@ -16,12 +17,29 @@ export class CompanySetupComponent implements OnInit {
   update(){
 
   }
-  delete(){
-    
+  public delete() {
+    debugger
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'You Want to delete it.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, Delete it!',
+      cancelButtonText: 'No, keep it'
+    }).then((result) => {
+      if (result.value == true) {
+        // this.DigiofficeService.DeleteGrivenceRequests(ID).subscribe(data => {
+        //   debugger
+        //   Swal.fire('Cancelled Successfully')
+        //   location.reload();
+        // })
+      }
+    })
   }
 
 
-  fileName = 'Report.xlsx';
+
+  fileName = 'Company Details.xlsx';
     exportexcel(): void {
       /* table id is passed over here */
       let element = document.getElementById('download');

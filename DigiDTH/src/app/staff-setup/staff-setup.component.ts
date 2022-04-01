@@ -14,7 +14,7 @@ export class StaffSetupComponent implements OnInit {
   }
 
 
-  fileName = 'Report.xlsx';
+  fileName = 'Staff Details.xlsx';
   exportexcel(): void {
     /* table id is passed over here */
     let element = document.getElementById('download');
