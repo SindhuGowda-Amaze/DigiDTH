@@ -96,4 +96,11 @@ export class SidebarComponent implements OnInit {
     this.router.navigate(['/LeaveDetailsupload']);
   }
 
+  public CompletedIssues() {
+    debugger
+    this.active = 99;
+    localStorage.setItem('clickname', 'Completed Issues')
+    this.router.navigate(['/CompletedIssue']);
+  }
+
 }
