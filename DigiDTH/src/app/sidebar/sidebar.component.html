@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-2 sidenav" style="height: 92vh;margin-top: 78px;position: fixed;" *ngIf="login!null">
         <!-- [ngClass]="{'Active1':active==1}" -->
-        <a (click)="StaffSetup()" class="nonactive" (click)="openCity($event)">
+        <a (click)="StaffSetup()" *ngIf="login==1" class="nonactive" (click)="openCity($event)">
             <img src="assets/64/Home1.png" class="admin" [ngClass]="active == 1 ? 'Active1' : 'Active2'" />
             <img id="Home" src="assets/Images/64_GREY/64/home.png" class="admin"
                 [ngClass]="active != 1 ? 'Active1' : 'Active2'">&nbsp;
@@ -28,7 +28,7 @@
             <!-- <img src="assets/images/downarrow.png" style="width: 20px;margin-left: 104px;"> -->
         </a>
 
-        <a *ngIf="login==1" (click)="newinstallation()" class="nonactive" (click)="openCity($event)">
+        <a *ngIf="login==2" (click)="newinstallation()" class="nonactive" (click)="openCity($event)">
             <img src="assets/Images/64_GREY/64/holiday.png" class="admin"
                 [ngClass]="active != 4 ? 'Active1' : 'Active2'" />
             <img src="assets/64/holiday.png" class="admin" [ngClass]="active == 4 ? 'Active1' : 'Active2'" />
@@ -37,7 +37,7 @@
         </a>
 
 
-        <a *ngIf="login==1" (click)="customerissues()" class="nonactive" (click)="openCity($event)">
+        <a *ngIf="login==2" (click)="customerissues()" class="nonactive" (click)="openCity($event)">
             <img src="assets/Images/64_GREY/64/Anoncement.png" class="admin"
                 [ngClass]="active != 5 ? 'Active1' : 'Active2'" />
             <img [ngClass]="active == 5 ? 'Active1' : 'Active2'" src="assets/64/Anoncement.png" class="admin" />
