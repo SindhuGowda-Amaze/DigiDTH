@@ -14,6 +14,7 @@ import { NewInstallationComponent } from './new-installation/new-installation.co
 import { CustomerIssuesComponent } from './customer-issues/customer-issues.component';
 import { FooterComponent } from './footer/footer.component';
 import { AddStaffComponent } from './add-staff/add-staff.component';
+import { StaffDetailsComponent } from './staff-details/staff-details.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { AddStaffComponent } from './add-staff/add-staff.component';
     NewInstallationComponent,
     CustomerIssuesComponent,
     FooterComponent,
-    AddStaffComponent
+    AddStaffComponent,
+    StaffDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { StaffSetupComponent } from './staff-setup/staff-setup.component';
 import { NewInstallationComponent } from './new-installation/new-installation.component';
 import { FooterComponent } from './footer/footer.component';
+import { StaffDetailsComponent } from './staff-details/staff-details.component';
 
 
 
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path:'CustomerReport',component:CustomerReportComponent},
   {path:'NewInstallation',component:NewInstallationComponent},
   {path:'CustomerIssues',component:CustomerIssuesComponent},
-  {path:'Footer',component:FooterComponent}
+  {path:'Footer',component:FooterComponent},
+  {path:'StaffDetails',component:StaffDetailsComponent}
 ];
 
 @NgModule({

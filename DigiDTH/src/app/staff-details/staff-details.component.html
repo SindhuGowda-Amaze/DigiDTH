@@ -1,0 +1,135 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-lg-11">
+                <p class="Heading" style="color: #3247D5; font-family: 'Poppins';">Staff Details</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="row leavereq">
+                <div class="col-md-2">
+                    <label>Employee ID<span style="color: red;">*</span></label>
+                </div>
+                <div class="col-md-2">
+                    <label>Employee Name<span style="color: red;">*</span></label>
+                </div>
+                <div class="col-md-2">
+                    <p>Department<span style="color: red;">*</span></p>
+                </div>
+                <div class="col-md-2">
+                    <p>Role<span style="color: red;">*</span></p>
+                </div>
+                <div class="col-md-2">
+                    <p>Phone Number<span style="color: red;">*</span></p>
+                </div>
+               
+
+            </div>
+            <div class="row leavereq">
+                <div class="col-md-2">
+                    <input type="text" class="form-control input"  placeholder="Employee ID">
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control input"  placeholder="Employee Name">
+                </div>
+
+                <div class="col-md-2">
+                    <select name="department" id="department" class="form-control">
+                        <option value="IT">IT</option>
+                        <option value="Business">Business</option>
+                      </select>
+                </div>
+                <div class="col-md-2">
+                    <select name="role" id="role" class="form-control">
+                        <option value="Developer">Developer</option>
+                        <option value="Tester">Tester</option>
+                      </select>
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" placeholder="Phone Number">
+                </div>              
+            </div>
+            <br>
+            <div class="row leavereq">
+                <div class="col-md-2">
+                    <label>Email ID<span style="color: red;">*</span></label>
+                </div>
+                <div class="col-md-2">
+                    <label>Address<span style="color: red;">*</span></label>
+                </div>
+                <div class="col-md-2">
+                    <p>Country<span style="color: red;">*</span></p>
+                </div>
+                <div class="col-md-2">
+                    <p>Province<span style="color: red;">*</span></p>
+                </div>
+                <div class="col-md-2">
+                    <p>City<span style="color: red;">*</span></p>
+                </div>
+               
+
+            </div>
+            <div class="row leavereq">
+                <div class="col-md-2">
+                    <input type="text" class="form-control input"  placeholder="Email ID">
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control input"  placeholder="Address">
+                </div>
+
+                <div class="col-md-2">
+                    <select name="country" id="country" class="form-control">
+                        <option value="select country">select country</option>
+                        <option value=""></option>
+                      </select>
+                </div>
+                <div class="col-md-2">
+                    <select name="province" id="province" class="form-control">
+                        <option value="select province">select province</option>
+                        <option value=""></option>
+                      </select>
+                </div>
+                <div class="col-md-2">
+                    <select name="city" id="city" class="form-control">
+                        <option value="select city">select city</option>
+                        <option value=""></option>
+                      </select>
+
+                </div>              
+            </div>
+              <br>
+            <div class="row leavereq">
+                <div class="col-md-3">
+                    <p>Photo</p>
+                </div>
+            </div>
+
+            <div class="row leavereq">
+                <div class="col-md-3">
+                    <ngx-dropzone (change)="onSelect($event)" style="width:100% ;height: auto;">
+                        <ngx-dropzone-label>Please Attach Photo!</ngx-dropzone-label>
+                        <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+                            <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                        </ngx-dropzone-preview>
+                    </ngx-dropzone>
+                </div>
+            </div>
+
+
+
+
+
+            <br>
+            <div class="row">
+                <div class="col-lg-10"></div>
+                <div class="col-lg-1">
+                    <button class="form-control cancel" >Cancel</button>
+                </div>
+                <div class="col-lg-1">
+                    <button class="form-control cancel" >Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
