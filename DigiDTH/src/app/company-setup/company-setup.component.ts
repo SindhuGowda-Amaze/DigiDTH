@@ -12,4 +12,10 @@ export class CompanySetupComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  update(){
+
+  }
+  delete(){
+    
+  }
 }
