@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AddStaffComponent } from './add-staff/add-staff.component';
 import { CompletedIssueComponent } from './completed-issue/completed-issue.component';
 import { AddNewInstallationComponent } from './add-new-installation/add-new-installation.component';
+import { StaffDetailsComponent } from './staff-details/staff-details.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { AddNewInstallationComponent } from './add-new-installation/add-new-inst
     FooterComponent,
     AddStaffComponent,
     CompletedIssueComponent,
-    AddNewInstallationComponent
+    AddNewInstallationComponent,
+    StaffDetailsComponent
   ],
   imports: [
     BrowserModule,

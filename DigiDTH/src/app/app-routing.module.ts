@@ -11,6 +11,7 @@ import { NewInstallationComponent } from './new-installation/new-installation.co
 import { FooterComponent } from './footer/footer.component';
 import { CompletedIssueComponent } from './completed-issue/completed-issue.component';
 import { AddNewInstallationComponent } from './add-new-installation/add-new-installation.component';
+import { StaffDetailsComponent } from './staff-details/staff-details.component';
 
 
 
@@ -27,7 +28,8 @@ const routes: Routes = [
   {path:'CustomerIssues',component:CustomerIssuesComponent},
   {path:'Footer',component:FooterComponent},
   {path:'CompletedIssue',component:CompletedIssueComponent},
-  {path:'AddNewInstallation',component:AddNewInstallationComponent}
+  {path:'AddNewInstallation',component:AddNewInstallationComponent},
+  {path:'StaffDetails',component:StaffDetailsComponent}
 ];
 
 @NgModule({
