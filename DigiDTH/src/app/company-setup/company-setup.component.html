@@ -1,24 +1,25 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12">
-            <p class="Heading1 ">Company Setup</p>
+            <p class="Heading1">Company Setup</p>
       
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-8 View">
-           
+        <div class="col-lg-8 View">         
         </div>
-
-        <div class="col-lg-4">
-            <button class="AddButton" routerLink="/CustomerReport" disabled>Add</button>
+        <div class="col-lg-2">
+            <button class="EditBTN" (click)="exportexcel()">Export Excel</button>
+        </div>
+        <div class="col-lg-2">
+            <button class="EditBTN" routerLink="/CustomerReport">Add</button>
         </div>
     </div> <br>
 
 
-        <div class="row">
+        <div class="row" >
             <div class="col-lg-12">
-                <table class="table">
+                <table class="table" id="download">
                     <thead>
                             <th>Company Logo</th>
                             <th>Company Name</th>
