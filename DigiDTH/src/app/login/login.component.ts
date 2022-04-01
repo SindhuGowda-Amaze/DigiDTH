@@ -6,11 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  router: any;
 
   constructor() { }
 
   ngOnInit(): void {
-
+    this.showpassword = 0;
   }
   roleid: any;
   username: any;
@@ -28,7 +29,11 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("temp", "1")
         localStorage.setItem("roleid", this.roleid)
         localStorage.setItem("loginname", this.username)
-        location.reload();
+
+        this.router.navigate(['/CompanySetup']).then(() => {
+          location.reload();
+
+        });
       }
       else {
         alert("Please enter valid Credentials")
@@ -36,37 +41,30 @@ export class LoginComponent implements OnInit {
     }
     else if (this.roleid == 2) {
       debugger
-      if (this.username == "Staff" && this.password == "Staff@123") {
+      if (this.username == "james" && this.password == "123") {
         localStorage.setItem("temp", "1")
         localStorage.setItem("roleid", this.roleid)
         localStorage.setItem("loginname", this.username)
 
-        location.reload();
+        this.router.navigate(['/NewInstallation']).then(() => {
+          location.reload();
+
+        });
+
       }
     }
   }
 
-  companycode:any;
-  public getcompanycode() {
+
+
+  showpassword: any;
+  Showhidepassword() {
     debugger
-    localStorage.setItem('companycode', this.companycode);
-    if (this.companycode == 1001) {
-      localStorage.setItem('apiurl', 'http://103.133.214.197/digiOfficeV4API');
-
+    if (this.showpassword == 0) {
+      this.showpassword = 1;
     }
-    else if (this.companycode == 1002) {
-      localStorage.setItem('apiurl', 'http://103.133.214.197/Dynamic_NCNDAAPI');
+    else {
+      this.showpassword = 0;
     }
   }
-
-  showpassword:any;
-Showhidepassword() {
-  debugger
-  if (this.showpassword == 0) {
-    this.showpassword = 1;
-  }
-  else {
-    this.showpassword = 0;
-  }
-}
 }
