@@ -60,6 +60,46 @@ export class NewInstallationComponent implements OnInit {
     })
   }
 
+  public validate() {
+    debugger
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'You Want to validate it.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, validate it!',
+      cancelButtonText: 'No, keep it'
+    }).then((result) => {
+      if (result.value == true) {
+        // this.DigiofficeService.DeleteGrivenceRequests(ID).subscribe(data => {
+        //   debugger
+          Swal.fire('validate Successfully')
+          location.reload();
+        // })
+      }
+    })
+  }
+
+  public issue() {
+    debugger
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'You Want to raise issue.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, raise the issue!',
+      cancelButtonText: 'No, keep it'
+    }).then((result) => {
+      if (result.value == true) {
+        // this.DigiofficeService.DeleteGrivenceRequests(ID).subscribe(data => {
+        //   debugger
+          Swal.fire('Raised Issue Successfully')
+          location.reload();
+        // })
+      }
+    })
+  }
+
 
   fileName = 'Report.xlsx';
   exportexcel(): void {
